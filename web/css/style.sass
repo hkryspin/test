@@ -1,0 +1,290 @@
+*, *:before, *:after
+    box-sizing: inherit
+
+html
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+html, body
+    height: 100%
+    background-color: #FAFAFA
+    background-color: #FEFEFE
+    //font-family: Lato-Bold
+    //font-family: 'Lato-Regular', sans-serif
+    //font-family: 'Open Sans', sans-serif
+
+.container
+    margin-bottom: 4rem
+
+//div
+    border: 1px solid red
+
+
+// ===============================================
+// HEADER
+
+.site-header
+    display: flex
+    align-items: center
+    width: 100%
+    //padding: 10px
+
+.site-logo
+    height: auto
+    float: none
+    color: #000
+    font-family: Georgia, "Times New Roman"
+    font-size: 4.25rem
+    font-weight: 800
+
+.site-motto
+    color: #8A8889
+    font-size: .75rem
+    font-weight: bold
+    letter-spacing: 1px
+    text-transform: uppercase
+
+.site-contact
+    display: inline-block
+    position: relative
+    padding-left: 2.25rem
+    text-align: left
+    border-left: 1px dotted #ccc
+    &.email
+        padding-left: 2.25rem
+        margin-left: 2.25rem
+    i
+        position: absolute
+        left: 0
+        padding: 0
+        width: 36px
+        height: 36px
+        text-align: center
+        line-height: 36px
+        font-size: 20px
+    h4
+        //font-family: 'OpenSans', sans-serif
+        font-size: 12px
+        //font-weight: 600
+        letter-spacing: 0.05em
+    p
+        font-size: 12px
+
+
+.navbar-light .navbar-nav .nav-link
+    color: #3A3738
+    font-family: 'Open Sans', sans-serif
+
+.navbar-nav
+    display: inline-block
+    vertical-align: middle
+
+.navbar
+    border-radius: 0
+    border-bottom: 1px solid rgba(0,0,0,.5)
+
+    -webkit-transition: all .5s ease-out
+    -moz-transition: all .5s ease-out
+    -o-transition: all .5s ease-out
+    transition: all .5s ease-out
+    //background: repeating-linear-gradient(to right, #fefefe, #fefefe 19px, #eee 1px, #eee 20px)
+    background-color: #f9f9f9
+
+.navbar-brand
+    //visibility: hidden
+    color: #2aabd2
+    //margin: 0
+    //padding: 0
+    letter-spacing: 4px
+    font-family: Georgia, "Times New Roman"
+    font-size: 30px
+
+// STICKY NAVBAR
+.affix
+    position: fixed
+    left: 0
+    right: 0
+    top: 0
+    z-index: 1000
+    width: 100%
+    &.navbar
+        background-color: #333
+        .nav-item > a, .navbar-brand
+            visibility: visible
+            color: #fff
+
+.affix.navbar .nav-link, .affix.navbar .navbar-brand
+    color: #fff
+
+// collapsed
+@media (max-width: 34em)
+    .navbar
+        .navbar-nav
+            float: none !important
+            > .nav-item
+                float: none
+                margin-left: .1rem
+        .collapse.in, .collapsing
+            clear: both
+
+// HEADER
+// ===============================================
+
+
+// ===============================================
+// ABOUT
+
+address
+    .fa, .nip
+        color: #8A8889
+address
+    h1
+        margin-bottom: 25px
+    p
+        margin: 0 0 10px
+        text-align: left
+        i
+            margin-right: 30px
+            width: 16px
+            height: 16px
+            text-align: center
+        .nip
+            margin-right: 18.47px
+            font-style: normal
+            font-weight: bold
+
+// ABOUT
+// ===============================================
+
+
+// ===============================================
+// HOME
+
+.carousel-container
+    padding: 0
+
+.carousel-control.left, .carousel-control.right
+    background-image: none
+
+.carousel-control .icon-prev, .carousel-control .icon-next
+    font-size: 4rem
+    top: 11.06rem
+
+.carousel-control .icon-prev
+    colow: #fff
+
+.carousel-control .icon-next
+    color: #000
+
+.carousel-inner
+    min-height: 25rem
+    img
+        position: absolute
+        -webkit-animation-duration: 5s
+        -webkit-filter: grayscale(75%)
+        filter: grayscale(75%)
+
+.shadow-container
+    //z-index: 2
+    //position: fixed
+
+.shadow
+    position: absolute
+    height: 3.125rem
+    //background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, .9), rgba(255, 255, 255, 0))
+    background: linear-gradient(to right, black, rgba(0, 91, 147, 0.9), rgba(255, 255, 255, 0))
+
+.s1
+    -webkit-animation-duration: 9s
+.s2
+    background: linear-gradient(to right, black, rgba(0, 91, 147, 0.9), rgba(0, 91, 147, 0.9),rgba(255, 255, 255, 0))
+    -webkit-animation-duration: 8s
+.s3
+    background: linear-gradient(to right, black, rgba(0, 91, 147, 0.9), rgba(0, 91, 147, 0.9),rgba(255, 255, 255, 0))
+    -webkit-animation-duration: 7s
+.s4
+    background: linear-gradient(to right, black, rgba(0, 91, 147, 0.9), rgba(0, 91, 147, 0.9),rgba(255, 255, 255, 0))
+    -webkit-animation-duration: 6s
+.s5
+    -webkit-animation-duration: 5s
+.s6
+    -webkit-animation-duration: 4s
+.s7
+    -webkit-animation-duration: 3s
+.s8
+    -webkit-animation-duration: 2s
+
+.carousel-caption
+    top: 0
+    max-width: 550px
+    text-align: left
+    text-shadow: 1px 1px 1px rgba(0,0,0,1)
+    h1
+        display: inline-block
+        padding: 1rem
+        color: rgb(238, 238, 238)
+        font-weight: 800
+        background: #3A3738
+    p
+        padding: 1rem
+        line-height: 1.75
+        font-family: OpenSans
+        text-align: justify
+        background: #3A3738
+
+    @media (max-width: 480px)
+        h1
+            font-size: 1.5rem
+            font-weight: 400
+        p
+            font-size: .75rem
+
+.partners
+    background-color: #E1E0E0
+
+.partner
+    padding: 1rem 0
+    text-align: center
+    color: #8A8889
+    font-family: Lato-Black
+    border-left: 1px dotted #ccc
+    border-right: 1px dotted #ccc
+
+    @media (min-width: 768px)
+        margin: 1rem
+    @media (min-width: 767px) and (max-width: 991px)
+        margin: 2rem 0
+        padding: 0
+    @media (min-width: 992px)
+        padding: 2rem 0
+
+// HOME
+//========================================================
+
+
+//.jumbotron
+    color: #222
+    //background-color: #fefefe
+    font-family: 'OpenSans', sans-serif
+    //background: linear-gradient(to right, deepskyblue, white)
+
+
+// ===============================================
+// FONTS
+
+@font-face
+    font-family: 'OpenSans'
+    src: url('../fonts/OpenSans-Regular.ttf')
+
+@font-face
+    font-family: 'Lato-Regular'
+    src: url('../fonts/Lato-Regular.ttf')
+
+@font-face
+    font-family: 'Lato-Bold'
+    src: url('../fonts/Lato-Bold.ttf')
+
+@font-face
+    font-family: 'Lato-Black'
+    src: url('../fonts/Lato-Black.ttf')

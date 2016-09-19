@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<!-- section bg f7f7f7 -->
+<header>
+    <div class="container">
+
+        <div class="row">
+            <div class="site-header">
+                <div class="col-md-4">
+                    <span class="site-logo">eSPa</span>
+                    <!--<span class="pull-md-left site-motto">Narzędzia i Oprzyrządowanie</span>-->
+                </div>
+                <div class="col-md-8 text-xs-right">
+                    <div class="hidden-sm-down site-contact phone">
+                        <i class="fa fa-phone fa-fw"></i>
+                        <h4>TELEFON</h4>
+                        <p>+48 (94) 312 08 67</p>
+                    </div>
+                    <div class="hidden-sm-down site-contact email">
+                        <i class="fa fa-envelope"></i>
+                        <h4>EMAIL</h4>
+                        <p>espa@espa.com.pl</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <nav class="navbar navbar-light bg-faded" data-toggle="affix">
+                <!-- sm-up -->
+                <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsingNavbar" aria-controls="collapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    MENU &#9776;
+                </button>
+
+                <!--<a class="navbar-brand" href="#"><i class="fa fa-angle-double-up"></i> eSPa</a>-->
+
+                <div class="collapse navbar-toggleable-md text-xs-center" id="collapsingNavbar"> <!-- xs -->
+                    <div class="nav navbar-nav">
+                        <a class="nav-item nav-link" href="#">O NAS</a>
+                        <a class="nav-item nav-link" href="#">USŁUGI</a>
+                        <a class="nav-item nav-link" href="#">REALIZACJE</a>
+                        <a class="nav-item nav-link" href="#">KONTAKT</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+    </div>
+</header>
+    <!--<hr style="height: 1000px">-->
+{% block content %}{% endblock %}
+
+{% endblock %}
