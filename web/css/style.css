@@ -182,12 +182,11 @@ address p {
 .carousel-caption {
   top: 0;
   max-width: 550px;
-  text-align: left;
-  text-shadow: 1px 1px 1px black; }
+  text-align: left; }
   .carousel-caption h1 {
-    display: inline-block;
     padding: 1rem;
     color: #eeeeee;
+    font-family: Lato-Black;
     font-weight: 800;
     background: #3A3738; }
   .carousel-caption p {
