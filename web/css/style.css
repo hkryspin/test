@@ -156,15 +156,12 @@ address p {
   -webkit-animation-duration: 9s; }
 
 .s2 {
-  background: linear-gradient(to right, black, rgba(0, 91, 147, 0.9), rgba(0, 91, 147, 0.9), rgba(255, 255, 255, 0));
   -webkit-animation-duration: 8s; }
 
 .s3 {
-  background: linear-gradient(to right, black, rgba(0, 91, 147, 0.9), rgba(0, 91, 147, 0.9), rgba(255, 255, 255, 0));
   -webkit-animation-duration: 7s; }
 
 .s4 {
-  background: linear-gradient(to right, black, rgba(0, 91, 147, 0.9), rgba(0, 91, 147, 0.9), rgba(255, 255, 255, 0));
   -webkit-animation-duration: 6s; }
 
 .s5 {
@@ -188,7 +185,8 @@ address p {
     color: #eeeeee;
     font-family: Lato-Black;
     font-weight: 800;
-    background: #3A3738; }
+    background: #3A3738;
+    border-radius: 10px; }
   .carousel-caption p {
     padding: 1rem;
     line-height: 1.75;
@@ -222,6 +220,24 @@ address p {
   @media (min-width: 992px) {
     .partner {
       padding: 2rem 0; } }
+
+address .fa, address .nip {
+  color: #8A8889; }
+
+address h1 {
+  margin-bottom: 25px; }
+address p {
+  margin: 0 0 10px;
+  text-align: left; }
+  address p i {
+    margin-right: 30px;
+    width: 16px;
+    height: 16px;
+    text-align: center; }
+  address p .nip {
+    margin-right: 18.47px;
+    font-style: normal;
+    font-weight: bold; }
 
 @font-face {
   font-family: "OpenSans";

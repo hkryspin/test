@@ -1,3 +1,9 @@
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
+
+about:
+    path: /about
+    defaults: {_controller: AppBundle:DefaultController:about}
+    options:
+        expose: true

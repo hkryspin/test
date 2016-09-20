@@ -1,0 +1,81 @@
+{% extends '::layout.html.twig' %}
+
+{% block content %}
+
+<section>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-4">
+                <address>
+                    <h1 style="font-size:20px;">DANE ADRESOWE</h1>
+                    <p><i class="fa fa-institution"></i> PPU "eSPa"</p>
+                    <hr />
+                    <p><i class="fa fa-street-view"></i> Paweł Szumski</p>
+                    <p><i class="fa fa-road"></i> Klementyny Hoffmanowej 1a</p>
+                    <p><i class="fa fa-building"></i> 78-200 Białogard</p>
+                    <hr />
+                    <p><i class="nip">NIP</i> 672-100-60-88</p>
+                    <hr />
+                    <p><i class="fa fa-phone"></i> +48 (94) 312 0867</p>
+                    <p><i class="fa fa-fax"></i> +48 (94) 312 5539</p>
+                    <p><i class="fa fa-envelope"></i> espa@espa.com.pl</p>
+                </address>
+            </div>
+
+            <div class="col-md-8">
+                <h1 style="font-size:20px;">NAPISZ DO NAS</h1>
+
+                <div class="done">
+                    <div class="alert alert-success">
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+                        Twoja wiadomość została wysłana. Dziękujemy!
+                    </div>
+                </div>
+
+                <form action="" id="main-contact-form" class="form">
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="mc-name" class="sr-only">Imię i Nazwisko</label>
+                            <input type="text" class="form-control" id="mc-name" name="mc-name" placeholder="Imię i Nazwisko">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="mc-email" class="sr-only">E-mail</label>
+                            <input type="text" class="form-control" id="mc-email" name="mc-email" placeholder="E-mail">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="mc-msg" class="sr-only">Example textarea</label>
+                        <textarea class="form-control" id="mc-msg" name="mc-msg" rows="4" placeholder="Wiadomość"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Wyślij</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="map" style="width:100%;height:500px">
+    <script>
+        function initMap() {
+            var myLatLng = {lat: 54.003995, lng: 15.993886};
+
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: myLatLng
+            });
+
+            var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                title: 'ESPA'
+            });
+        }
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBdfX9End5ovq15yd5pXnsZJIR0cF-eqo&callback=initMap">
+    </script>
+</section>
+
+{% endblock %}
