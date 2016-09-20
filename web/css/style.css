@@ -150,13 +150,16 @@ address p {
 .shadow {
   position: absolute;
   height: 3.125rem;
-  background: linear-gradient(to right, black, rgba(0, 91, 147, 0.9), rgba(255, 255, 255, 0)); }
+  background: linear-gradient(to right, black, rgba(0, 91, 147, 0.9), rgba(255, 255, 255, 0));
+  animation-fill-mode: forwards; }
 
 .s1 {
-  -webkit-animation-duration: 9s; }
+  -webkit-animation-duration: 9s;
+  animation-fill-mode: forwards; }
 
 .s2 {
-  -webkit-animation-duration: 8s; }
+  -webkit-animation-duration: 8s;
+  animation-fill-mode: forwards; }
 
 .s3 {
   -webkit-animation-duration: 7s; }
