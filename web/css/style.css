@@ -182,19 +182,20 @@ address p {
 .carousel-caption {
   top: 0;
   max-width: 550px;
-  text-align: left; }
+  text-align: left;
+  color: #fafafa; }
   .carousel-caption h1 {
     padding: 1rem;
-    color: #eeeeee;
     font-family: Lato-Black;
     font-weight: 800;
     background: #3A3738;
-    border-radius: 10px; }
+    margin-bottom: 0; }
   .carousel-caption p {
     padding: 1rem;
     line-height: 1.75;
     font-family: OpenSans;
     text-align: justify;
+    color: #E1E0E0;
     background: #3A3738; }
   @media (max-width: 480px) {
     .carousel-caption h1 {
@@ -242,6 +243,15 @@ address p {
     font-style: normal;
     font-weight: bold; }
 
+footer .fa, footer .nip {
+  color: #fefefe; }
+footer h3 {
+  margin-bottom: 2rem;
+  padding: 0 0 15px 15px;
+  border-bottom: 1px dotted #fefefe; }
+footer h1 {
+  margin-bottom: 25px; }
+
 @font-face {
   font-family: "OpenSans";
   src: url("../fonts/OpenSans-Regular.ttf"); }
@@ -254,5 +264,8 @@ address p {
 @font-face {
   font-family: "Lato-Black";
   src: url("../fonts/Lato-Black.ttf"); }
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.ttf"); }
 
 /*# sourceMappingURL=style.css.map */
