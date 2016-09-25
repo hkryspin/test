@@ -2,14 +2,14 @@ app:
     resource: "@AppBundle/Controller/"
     type:     annotation
 
-contact:
-    path: /contact
-    defaults: {_controller: AppBundle:DefaultController:contact}
-    options:
-        expose: true
-
 about:
     path: /about
     defaults: {_controller: AppBundle:DefaultController:about}
+    options:
+        expose: true
+
+contact:
+    path: /contact
+    defaults: {_controller: AppBundle:DefaultController:contact}
     options:
         expose: true
