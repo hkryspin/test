@@ -8,16 +8,7 @@ html {
 
 html, body {
   height: 100%;
-  background-color: #FAFAFA;
   background-color: #FEFEFE; }
-
-.container {
-  margin-bottom: 4rem; }
-
-.site-header {
-  display: flex;
-  align-items: center;
-  width: 100%; }
 
 .site-logo {
   height: auto;
@@ -25,74 +16,90 @@ html, body {
   color: #000;
   font-family: Georgia, "Times New Roman";
   font-size: 4.25rem;
-  font-weight: 800; }
+  font-weight: 800;
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15); }
 
-.site-motto {
-  color: #8A8889;
-  font-size: 0.75rem;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-transform: uppercase; }
+.contact-box {
+  margin-left: 0.9375rem;
+  padding: 0 0.75rem; }
 
-.site-contact {
-  display: inline-block;
-  position: relative;
-  padding-left: 2.25rem;
-  text-align: left;
-  border-left: 1px dotted #ccc; }
-  .site-contact.email {
-    padding-left: 2.25rem;
-    margin-left: 2.25rem; }
-  .site-contact i {
-    position: absolute;
-    left: 0;
-    padding: 0;
-    width: 36px;
-    height: 36px;
-    text-align: center;
-    line-height: 36px;
-    font-size: 20px; }
-  .site-contact h4 {
-    font-size: 12px;
-    letter-spacing: 0.05em; }
-  .site-contact p {
-    font-size: 12px; }
+.contact-box-icon {
+  display: flex;
+  align-items: center; }
+  .contact-box-icon:hover .fa {
+    color: #3A3738; }
+  .contact-box-icon > .fa {
+    line-height: inherit;
+    float: left;
+    display: inline-block;
+    margin-right: 0.625rem;
+    font-size: 2.5rem;
+    color: #8A8889; }
+
+.contact-box-text {
+  line-height: 1.25rem;
+  color: #3A3738; }
+
+@media (min-width: 992px) {
+  .header-contacts {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-bottom: 2rem; }
+
+  .email {
+    border-left: 1px dotted #8A8889;
+    border-right: 1px dotted #8A8889;
+    padding-left: 27px; }
+
+  .contact-box-text {
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+
+  .box-separator {
+    display: none; } }
+@media (min-width: 1200px) {
+  .header-contacts {
+    padding: 26.91px 0; }
+
+  .site-logo {
+    float: left; }
+
+  .header-contacts {
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    margin-bottom: 0; } }
+.navbar {
+  border-radius: 0;
+  background-color: #f9f9f9;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out; }
 
 .navbar-light .navbar-nav .nav-link {
   color: #3A3738;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Roboto", sans-serif; }
 
 .navbar-nav {
   display: inline-block;
   vertical-align: middle; }
-
-.navbar {
-  border-radius: 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-  -webkit-transition: all 0.5s ease-out;
-  -moz-transition: all 0.5s ease-out;
-  -o-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
-  background-color: #f9f9f9; }
-
-.navbar-brand {
-  color: #2aabd2;
-  letter-spacing: 4px;
-  font-family: Georgia, "Times New Roman";
-  font-size: 30px; }
 
 .affix {
   position: fixed;
   left: 0;
   right: 0;
   top: 0;
-  z-index: 1000;
+  z-index: 100;
   width: 100%; }
   .affix.navbar {
     background-color: #333; }
-    .affix.navbar .nav-item > a, .affix.navbar .navbar-brand {
-      visibility: visible;
-      color: #fff; }
 
 .affix.navbar .nav-link, .affix.navbar .navbar-brand {
   color: #fff; }
@@ -105,33 +112,19 @@ html, body {
       margin-left: 0.1rem; }
   .navbar .collapse.in, .navbar .collapsing {
     clear: both; } }
-address .fa, address .nip {
-  color: #8A8889; }
-
-address h1 {
-  margin-bottom: 25px; }
-address p {
-  margin: 0 0 10px;
-  text-align: left; }
-  address p i {
-    margin-right: 30px;
-    width: 16px;
-    height: 16px;
-    text-align: center; }
-  address p .nip {
-    margin-right: 18.47px;
-    font-style: normal;
-    font-weight: bold; }
-
 .carousel-container {
-  padding: 0; }
+  padding: 0;
+  margin-top: 2rem;
+  margin-bottom: 5rem; }
 
 .carousel-control.left, .carousel-control.right {
   background-image: none; }
 
 .carousel-control .icon-prev, .carousel-control .icon-next {
-  font-size: 4rem;
-  top: 11.06rem; }
+  font-size: 5rem;
+  top: 10.25rem;
+  display: flex;
+  align-self: center; }
 
 .carousel-control .icon-prev {
   color: #fff; }
@@ -143,9 +136,7 @@ address p {
   min-height: 25rem; }
   .carousel-inner img {
     position: absolute;
-    -webkit-animation-duration: 5s;
-    -webkit-filter: grayscale(75%);
-    filter: grayscale(75%); }
+    -webkit-animation-duration: 5s; }
 
 .shadow {
   position: absolute;
@@ -154,12 +145,10 @@ address p {
   animation-fill-mode: forwards; }
 
 .s1 {
-  -webkit-animation-duration: 9s;
-  animation-fill-mode: forwards; }
+  -webkit-animation-duration: 9s; }
 
 .s2 {
-  -webkit-animation-duration: 8s;
-  animation-fill-mode: forwards; }
+  -webkit-animation-duration: 8s; }
 
 .s3 {
   -webkit-animation-duration: 7s; }
@@ -180,29 +169,13 @@ address p {
   -webkit-animation-duration: 2s; }
 
 .carousel-caption {
+  display: flex;
+  align-items: center;
   top: 0;
-  max-width: 550px;
-  text-align: left;
-  color: #fafafa; }
+  height: 25rem;
+  color: black; }
   .carousel-caption h1 {
-    padding: 1rem;
-    font-family: Lato-Black;
-    font-weight: 800;
-    background: #3A3738;
-    margin-bottom: 0; }
-  .carousel-caption p {
-    padding: 1rem;
-    line-height: 1.75;
-    font-family: OpenSans;
-    text-align: justify;
-    color: #E1E0E0;
-    background: #3A3738; }
-  @media (max-width: 480px) {
-    .carousel-caption h1 {
-      font-size: 1.5rem;
-      font-weight: 400; }
-    .carousel-caption p {
-      font-size: 0.75rem; } }
+    font-weight: 800; }
 
 .partners {
   background-color: #E1E0E0; }
@@ -243,14 +216,53 @@ address p {
     font-style: normal;
     font-weight: bold; }
 
-footer .fa, footer .nip {
-  color: #fefefe; }
-footer h3 {
-  margin-bottom: 2rem;
-  padding: 0 0 15px 15px;
-  border-bottom: 1px dotted #fefefe; }
-footer h1 {
-  margin-bottom: 25px; }
+.form-header {
+  color: #fff;
+  text-align: center;
+  margin-top: -50px;
+  margin-bottom: 3rem;
+  padding: 1rem;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px; }
+
+.map-container {
+  width: 100%;
+  height: 400px;
+  cursor: hand; }
+
+footer {
+  font-family: Roboto;
+  border-top: 1px solid #000;
+  background: #3A3738; }
+  footer .bg-inner {
+    background-color: #fefefe;
+    color: #000;
+    box-shadow: 5px 2px 10px #000; }
+  footer p {
+    margin: 0;
+    line-height: 2rem; }
+  footer i {
+    text-align: center; }
+  footer .fa, footer .nip {
+    width: 2rem;
+    height: auto; }
+  footer .nip {
+    padding-left: 0.5rem;
+    font-style: normal;
+    font-weight: bold; }
+  footer h3 {
+    padding: 0 0 15px 15px;
+    border-bottom: 1px dotted #fefefe; }
+  footer h4 {
+    margin: 1rem 0;
+    padding-left: 0.5rem;
+    font-size: 1.25rem;
+    letter-spacing: 1px; }
+  footer .copyright {
+    color: #E1E0E0; }
 
 @font-face {
   font-family: "OpenSans";
@@ -267,5 +279,22 @@ footer h1 {
 @font-face {
   font-family: "Roboto";
   src: url("../fonts/Roboto-Regular.ttf"); }
+.m-shadow {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
+
+.m-shadow-big {
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+
+.bg-stylish {
+  background-color: #4B515D !important; }
+
+.bg-stylish-dark {
+  background-color: #3E4551 !important; }
+
+.bg-elegant {
+  background-color: #2E2E2E !important; }
+
+.bg-elegant-dark {
+  background-color: #212121 !important; }
 
 /*# sourceMappingURL=style.css.map */

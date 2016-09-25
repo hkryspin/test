@@ -19,11 +19,21 @@ class DefaultController extends Controller
     }
 
     /**
+     * @Route("/contact")
+     */
+    public function contactAction()
+    {
+        return $this->render(':default:contact.html.twig', [
+            'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..'),
+        ]);
+    }
+
+    /**
      * @Route("/about")
      */
     public function aboutAction()
     {
-        return $this->render('default/about.html.twig', [
+        return $this->render(':default:about.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..'),
         ]);
     }
