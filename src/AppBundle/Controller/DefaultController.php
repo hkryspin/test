@@ -19,7 +19,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/about", name="about")
+     * @Route("/about")
      */
     public function aboutAction()
     {
@@ -29,7 +29,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/contact", name="contact")
+     * @Route("/contact")
      */
     public function contactAction()
     {

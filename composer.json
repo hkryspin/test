@@ -1,10 +1,10 @@
 {
-    "name": "darkstar/.checkout",
+    "name": "darkstar/espa",
     "license": "proprietary",
     "type": "project",
     "autoload": {
         "psr-4": {
-            "": "src/"
+            "AppBundle\\": "src/AppBundle/"
         },
         "classmap": [
             "app/AppKernel.php",
