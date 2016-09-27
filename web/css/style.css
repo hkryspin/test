@@ -27,18 +27,29 @@ html, body {
   display: flex;
   align-items: center; }
   .contact-box-icon:hover .fa {
-    color: #3A3738; }
+    color: #3A3738;
+    -webkit-transition: color 0.5s ease-out;
+    -moz-transition: color 0.5s ease-out;
+    -o-transition: color 0.5s ease-out;
+    transition: color 0.5s ease-out; }
   .contact-box-icon > .fa {
     line-height: inherit;
     float: left;
     display: inline-block;
     margin-right: 0.625rem;
     font-size: 2.5rem;
-    color: #8A8889; }
+    color: #8A8889;
+    -webkit-transition: color 0.5s ease-out;
+    -moz-transition: color 0.5s ease-out;
+    -o-transition: color 0.5s ease-out;
+    transition: color 0.5s ease-out; }
 
 .contact-box-text {
   line-height: 1.25rem;
   color: #3A3738; }
+
+.contact-box-head {
+  font-size: 14px; }
 
 @media (min-width: 992px) {
   .header-contacts {
@@ -138,6 +149,9 @@ html, body {
     position: absolute;
     -webkit-animation-duration: 5s; }
 
+.carousel-caption div {
+  -webkit-animation-duration: 5s; }
+
 .shadow {
   position: absolute;
   height: 3.125rem;
@@ -198,6 +212,10 @@ html, body {
     .partner {
       padding: 2rem 0; } }
 
+.nip {
+  font-style: normal;
+  font-weight: bold; }
+
 address .fa, address .nip {
   color: #8A8889; }
 
@@ -224,8 +242,6 @@ address p {
   padding: 1rem;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
   border-radius: 2px; }
 
 .map-container {
@@ -264,6 +280,20 @@ footer {
   footer .copyright {
     color: #E1E0E0; }
 
+.footer-icon {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  color: #fefefe;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 30px;
+  border: 1px solid #E1E0E0;
+  outline: 1px solid #E1E0E0;
+  outline-offset: 10px;
+  background-color: #8A8889; }
+
 @font-face {
   font-family: "OpenSans";
   src: url("../fonts/OpenSans-Regular.ttf"); }
@@ -284,6 +314,9 @@ footer {
 
 .m-shadow-big {
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+
+.m-shadow-big-in {
+  box-shadow: 0 0 55px 0 rgba(255, 255, 255, 0.8) inset; }
 
 .bg-stylish {
   background-color: #4B515D !important; }

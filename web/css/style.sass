@@ -41,6 +41,10 @@ html, body
     &:hover
         .fa
             color: #3A3738
+            -webkit-transition: color .5s ease-out
+            -moz-transition: color .5s ease-out
+            -o-transition: color .5s ease-out
+            transition: color .5s ease-out
     > .fa
         line-height: inherit
         float: left
@@ -48,10 +52,17 @@ html, body
         margin-right: .625rem
         font-size: 2.5rem
         color: #8A8889
+        -webkit-transition: color .5s ease-out
+        -moz-transition: color .5s ease-out
+        -o-transition: color .5s ease-out
+        transition: color .5s ease-out
 
 .contact-box-text
     line-height: 1.25rem
     color: #3A3738
+
+.contact-box-head
+    font-size: 14px
 
 @media (min-width: 992px)
     .header-contacts
@@ -162,6 +173,9 @@ html, body
         -webkit-animation-duration: 5s
         //-webkit-filter: grayscale(75%)
         //filter: grayscale(75%)
+.carousel-caption
+    div
+        -webkit-animation-duration: 5s
 
 .shadow
     position: absolute
@@ -235,6 +249,9 @@ html, body
 // ABOUT
 // ===============================================
 
+.nip
+    font-style: normal
+    font-weight: bold
 address
     .fa, .nip
         color: #8A8889
@@ -262,8 +279,6 @@ address
     padding: 1rem
     -webkit-border-radius: 2px
     -moz-border-radius: 2px
-    -ms-border-radius: 2px
-    -o-border-radius: 2px
     border-radius: 2px
 
 .map-container
@@ -314,6 +329,23 @@ footer
 // FOOTER
 // ===============================================
 
+.footer-icon
+    display: inline-block
+    margin-bottom: .5rem
+    color: #fefefe
+    text-align: center
+    width: 50px
+    height: 50px
+    line-height: 50px
+    font-size: 30px
+    border: 1px solid #E1E0E0
+    outline: 1px solid #E1E0E0
+    outline-offset: 10px
+    background-color: #8A8889
+
+// FOOTER
+// ===============================================
+
 
 // ===============================================
 // FONTS
@@ -345,6 +377,9 @@ footer
 
 .m-shadow-big
     box-shadow: 0 8px 17px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19)
+
+.m-shadow-big-in
+    box-shadow: 0 0 55px 0 rgba(255,255,255,.8) inset
 
 .bg-stylish
     background-color: #4B515D!important
