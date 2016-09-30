@@ -53,12 +53,12 @@
 
     <div class="container">
 
-        <div class="row menu m-shadow">
-            <nav class="navbar navbar-light bg-faded" data-toggle="affix">
+        <div class="row m-shadow">
+            <nav class="navbar navbar-light bg-faded text-xs-center m-shadow text-mist" data-toggle="affix">
                 <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsingNavbar" aria-controls="collapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                    MENU &#9776;
+                    MENU <i class="fa fa-bars"></i>
                 </button>
-                <div class="collapse navbar-toggleable-md text-xs-center" id="collapsingNavbar">
+                <div class="collapse navbar-toggleable-md" id="collapsingNavbar">
                     <div class="nav navbar-nav">
                         <a class="nav-item nav-link" href="{{ path('homepage') }}">
                             <i class="fa fa-home"></i>
@@ -78,74 +78,51 @@
 
 {% block content %}{% endblock %}
 
-<div class="container-fluid" style="margin: 4rem 0;">
-    <div class="col-xs-12 col-md-3">
-        <p><i class="fa fa-map-marker footer-icon m-shadow"></i></p>
-        <p>P.P.U. "eSPa"</p>
-        <p>Paweł Szumski</p>
-        <p>ul. Klementyny Hoffmanowej 1A</p>
-        <p>78-200 Białogard</p>
-        <br />
-        <p><i class="nip">NIP</i> 672-100-60-88</p>
-    </div>
+<footer class="container-fluid" style="margin-top: 4rem;">
+    <div class="row">
 
-    <div class="col-xs-12 col-md-3">
-        <p><i class="fa fa-phone footer-icon m-shadow"></i></p>
-        <p>tel: +48 (94) 312 0867</p>
-        <p>fax: +48 (94) 312 5539</p>
-        <p>espa@espa.com.pl</p>
-    </div>
-
-    <div class="col-xs-12 col-md-3">
-        <p><i class="fa fa-envelope footer-icon m-shadow"></i></p>
-        <p>biuro: office@espa.com.pl</p>
-        <p>sprawy techniczne: tech@espa.com.pl</p>
-        <p>zamówienia: zamowienia@espa.com.pl</p>
-    </div>
-
-    <div class="col-xs-12 col-md-3">
-        <p><i class="fa fa-user-secret footer-icon m-shadow"></i></p>
-        <h4>Karol Szumski</h4>
-        <p>k.szumski@espa.com.pl</p>
-        <h4 style="margin-top: 3rem;">Paweł Szumski</h4>
-        <p>p.szumski@espa.com.pl</p>
-    </div>
-</div>
-
-<footer class="container-fluid bg-elegant" style="color: white; padding: 5rem">
-    <h3>P.P.U. "eSPa"</h3>
-    <div class="container bg-inner">
         <div class="col-xs-12 col-md-3">
-            <h4>DANE KONTAKTOWE</h4>
-            <p><i class="fa fa-institution"></i>PPU "eSPa"</p>
-            <p><i class="fa fa-street-view"></i>Paweł Szumski</p>
-            <p><i class="fa fa-road"></i>Klementyny Hoffmanowej 1A</p>
-            <p><i class="fa fa-building"></i>78-200 Białogard</p>
-            <br />
+            <div class="hr-line">
+                <i class="fa fa-map-marker footer-icon m-shadow"></i>
+            </div>
+            <p>P.P.U. "eSPa"</p>
+            <p>Paweł Szumski</p>
+            <p>ul. Klementyny Hoffmanowej 1A</p>
+            <p>78-200 Białogard</p>
             <p><i class="nip">NIP</i> 672-100-60-88</p>
         </div>
+
         <div class="col-xs-12 col-md-3">
-            <h4>TELEFON/FAX</h4>
-            <p><i class="fa fa-phone"></i>+48 (94) 312 0867</p>
-            <p><i class="fa fa-fax"></i>+48 (94) 312 5539</p>
-            <p><i class="fa fa-envelope"></i>espa@espa.com.pl</p>
+            <div class="hr-line">
+                <i class="fa fa-phone footer-icon m-shadow"></i>
+            </div>
+            <p><span class="text-muted">tel:</span> +48 (94) 312 0867</p>
+            <p><span class="text-muted">fax:</span> +48 (94) 312 5539</p>
         </div>
+
         <div class="col-xs-12 col-md-3">
-            <h4>BIURO</h4>
-            <p><i class="fa fa-envelope"></i>office@espa.com.pl</p>
-            <h4 style="margin-top: 3rem;">SPRAWY TECHNICZNE</h4>
-            <p><i class="fa fa-envelope"></i>tech@espa.com.pl</p>
-            <h4 style="margin-top: 3rem;">ZAMÓWIENIA</h4>
-            <p><i class="fa fa-envelope"></i>zamowienia@espa.com.pl</p>
+            <div class="hr-line">
+                <i class="fa fa-envelope footer-icon m-shadow"></i>
+            </div>
+            <p>espa@espa.com.pl</p>
+            <p><span class="text-muted">biuro:</span> office@espa.com.pl</p>
+            <p><span class="text-muted">sprawy techniczne:</span> tech@espa.com.pl</p>
+            <p><span class="text-muted">zamówienia:</span> zamowienia@espa.com.pl</p>
         </div>
+
         <div class="col-xs-12 col-md-3">
+            <div class="hr-line">
+                <i class="fa fa-user-secret footer-icon m-shadow"></i>
+            </div>
             <h4>Karol Szumski</h4>
-            <p><i class="fa fa-envelope"></i>k.szumski@espa.com.pl</p>
-            <h4 style="margin-top: 3rem;">Paweł Szumski</h4>
-            <p><i class="fa fa-envelope"></i>p.szumski@espa.com.pl</p>
+            <p>k.szumski@espa.com.pl</p>
+            <h4>Paweł Szumski</h4>
+            <p>p.szumski@espa.com.pl</p>
         </div>
+
     </div>
-    <div class="col-md-12 copyright">
+
+    <div class="row bg-elegant copyright">
         © Copyrights 2016 eSPa.
     </div>
 </footer>

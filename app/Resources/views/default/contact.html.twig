@@ -8,9 +8,9 @@
 
     <div class="row">
 
-        <div class="col-md-5">
+        <div class="col-md-4">
             <address>
-                <h1 style="font-size:20px;">INFORMACJE KONTAKTOWE</h1>
+                <h1 class="text-autumn" style="font-size:20px;">INFORMACJE KONTAKTOWE</h1>
                 <p><i class="fa fa-institution"></i> PPU "eSPa"</p>
                 <hr />
                 <p><i class="fa fa-street-view"></i> Paweł Szumski</p>
@@ -25,17 +25,145 @@
             </address>
         </div>
 
-        <div class="col-md-7">
+        <div class="col-md-8">
             <section id="map" class="map-container m-shadow">
                 <script>
                     function initMap() {
                         var myLatLng = {lat: 54.003995, lng: 15.993886};
 
+                        var styledMapType = new google.maps.StyledMapType(
+                                [
+                                    {
+                                        "featureType": "landscape",
+                                        "stylers": [
+                                            {
+                                                "saturation": -100
+                                            },
+                                            {
+                                                "lightness": 65
+                                            },
+                                            {
+                                                "visibility": "on"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "featureType": "poi",
+                                        "stylers": [
+                                            {
+                                                "saturation": -100
+                                            },
+                                            {
+                                                "lightness": 51
+                                            },
+                                            {
+                                                "visibility": "simplified"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "featureType": "road.highway",
+                                        "stylers": [
+                                            {
+                                                "saturation": -100
+                                            },
+                                            {
+                                                "visibility": "simplified"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "featureType": "road.arterial",
+                                        "stylers": [
+                                            {
+                                                "saturation": -100
+                                            },
+                                            {
+                                                "lightness": 30
+                                            },
+                                            {
+                                                "visibility": "on"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "featureType": "road.local",
+                                        "stylers": [
+                                            {
+                                                "saturation": -100
+                                            },
+                                            {
+                                                "lightness": 40
+                                            },
+                                            {
+                                                "visibility": "on"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "featureType": "transit",
+                                        "stylers": [
+                                            {
+                                                "saturation": -100
+                                            },
+                                            {
+                                                "visibility": "simplified"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "featureType": "administrative.province",
+                                        "stylers": [
+                                            {
+                                                "visibility": "off"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "featureType": "water",
+                                        "elementType": "labels",
+                                        "stylers": [
+                                            {
+                                                "visibility": "on"
+                                            },
+                                            {
+                                                "lightness": -25
+                                            },
+                                            {
+                                                "saturation": -100
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "featureType": "water",
+                                        "elementType": "geometry",
+                                        "stylers": [
+                                            {
+                                                "hue": "#ffff00"
+                                            },
+                                            {
+                                                "lightness": -25
+                                            },
+                                            {
+                                                "saturation": -97
+                                            }
+                                        ]
+                                    }
+                                ],
+                                {name: 'Styled Map'});
+
                         var map = new google.maps.Map(document.getElementById('map'), {
                             zoom: 15,
                             center: myLatLng,
-                            scrollwheel:  false
+                            scrollwheel:  false,
+                            mapTypeControlOptions: {
+                                mapTypeIds: ['roadmap', 'satellite', 'hybrid', 'terrain',
+                                    'styled_map']
+                            }
                         });
+
+                        map.mapTypes.set('styled_map', styledMapType);
+                        map.setMapTypeId('styled_map');
 
                         var marker = new google.maps.Marker({
                             position: myLatLng,
@@ -54,7 +182,7 @@
 </section>
 
 <section class="container">
-    <div class="card col-md-8 offset-md-2 m-shadow">
+    <div class="card col-md-8 offset-md-4 m-shadow">
         <div class="card-block">
 
             <div class="form-header m-shadow-big" style="background-color: #3A3738">
