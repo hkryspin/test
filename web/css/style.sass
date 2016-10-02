@@ -6,17 +6,62 @@ html
     -moz-box-sizing: border-box
     box-sizing: border-box
 
+$color-mist: #90afc5
+$color-stone: #336b87
+$color-shadow: #2a3132
+$color-autumn: #763626
+
+$color-my-black: #3A3738
+$color-my-grey-dark: #989898
+
 html, body
-    height: 100%
-    background-color: #FEFEFE
-    //border-top: 1px solid #3A3738
-    //font-family: 'Open Sans', sans-serif
-    //font-family: 'Roboto', sans-serif
+    //height: 100%
+    background-color: #fefefe
+    border-top: 1px solid $color-my-black
     font-family: 'SansPro', sans-serif
+
+.site-wrapper
+    padding: 0
 
 //div
     border: 1px solid red
 
+.site-title
+    padding: 3rem 0
+    margin-bottom: 3rem
+    color: #fefefe
+
+//bg image overlay
+.site-title:after
+    background-color: rgba(0,47,102,0.8)
+    content: ''
+    margin: auto
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+
+.section-title
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    padding-top: 5rem
+    margin-bottom: 3rem
+
+.section-title::before, .section-title::after
+    flex: 1
+    content: ''
+    height: 1px
+    background: $color-shadow
+    margin: 0 1em
+
+.breadcrumb
+    padding: 0
+    margin: 0
+    background-color: transparent
+    border-radius: 0
 
 // ===============================================
 // HEADER
@@ -39,7 +84,7 @@ html, body
     align-items: center
     &:hover
         .fa
-            color: #3A3738
+            color: $color-my-black
             -webkit-transition: color .5s ease-out
             -moz-transition: color .5s ease-out
             -o-transition: color .5s ease-out
@@ -50,7 +95,7 @@ html, body
         display: inline-block
         margin-right: .625rem
         font-size: 2.5rem
-        color: #8A8889
+        color: $color-my-grey-dark
         -webkit-transition: color .5s ease-out
         -moz-transition: color .5s ease-out
         -o-transition: color .5s ease-out
@@ -58,7 +103,7 @@ html, body
 
 .contact-box-text
     line-height: 1.25rem
-    color: #3A3738
+    color: $color-my-black
 
 .contact-box-head
     font-size: 14px
@@ -73,8 +118,8 @@ html, body
         justify-content: center
         margin-bottom: 2rem
     .email
-        border-left: 1px dotted #8A8889
-        border-right: 1px dotted #8A8889
+        border-left: 1px dotted $color-my-grey-dark
+        border-right: 1px dotted $color-my-grey-dark
         padding-left: 27px
         padding-right: 27px
     .contact-box-text
@@ -105,12 +150,13 @@ html, body
     -o-transition: all .5s ease-out
     transition: all .5s ease-out
 
-.navbar-light .navbar-nav .nav-link
-    color: #3A3738
+.navbar-nav .nav-link
+    color: $color-my-black
     font-family: 'Roboto', sans-serif
 
 .navbar-nav
-    display: inline-block
+    //display: inline-block
+    padding-left: 3rem
     vertical-align: middle
 
 
@@ -153,10 +199,8 @@ html, body
 // HOME
 
 .carousel-container
+    margin-bottom: 5rem
     padding: 0
-    //margin-top: 2rem
-    //margin-bottom: 5rem
-    //background: url('../images/triangle.png') right -2rem bottom -2rem no-repeat
 
 .carousel-control.left, .carousel-control.right
     background-image: none
@@ -178,15 +222,13 @@ html, body
     img
         position: absolute
         -webkit-animation-duration: 5s
-        //-webkit-filter: grayscale(75%)
-        //filter: grayscale(75%)
 
 .carousel-caption
     display: flex
     align-items: center
     top: 0
     height: 25rem
-    color: black
+    color: #000
     h1
         font-weight: 400
     h2
@@ -199,28 +241,52 @@ html, body
         h2
             font-size: 1rem
 
-.shadow
+.c-gradient
     position: absolute
     height: 3.125rem
-    background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 91, 147, 0.9), rgba(255, 255, 255, 0))
-    animation-fill-mode: forwards
+    background: linear-gradient(to right, rgba(254,254,254,0), rgba(0,91,147,0.9), rgba(254,254,254,0))
 
 .s1
     -webkit-animation-duration: 9s
+    animation-fill-mode: forwards
 .s2
     -webkit-animation-duration: 8s
+    animation-fill-mode: forwards
 .s3
     -webkit-animation-duration: 7s
+    animation-fill-mode: forwards
 .s4
     -webkit-animation-duration: 6s
+    animation-fill-mode: forwards
 .s5
     -webkit-animation-duration: 5s
+    animation-fill-mode: forwards
 .s6
     -webkit-animation-duration: 4s
+    animation-fill-mode: forwards
 .s7
     -webkit-animation-duration: 3s
+    animation-fill-mode: forwards
 .s8
     -webkit-animation-duration: 2s
+    animation-fill-mode: forwards
+
+#activities
+    background-color: #f9f9f9
+    .card
+        display: inline-block // fix for card-columns in bootstrap alpha 4
+    .card-title
+        color: #fefefe
+        font-size: 1.5rem
+        line-height: 2rem
+        margin-bottom: 0
+    .card-subtitle
+        margin-top: .5rem
+        color: #dedede
+    img
+        width: 100%
+        -webkit-filter: grayscale(50%)
+        filter: grayscale(50%)
 
 .partners
     background-color: #E1E0E0
@@ -228,7 +294,7 @@ html, body
 .partner
     padding: 1rem 0
     text-align: center
-    color: #8A8889
+    color: $color-my-grey-dark
     border-left: 1px dotted #ccc
     border-right: 1px dotted #ccc
 
@@ -252,7 +318,7 @@ html, body
     font-weight: bold
 address
     .fa, .nip
-        color: #8A8889
+        color: $color-my-grey-dark
 address
     h1
         margin-bottom: 25px
@@ -284,10 +350,12 @@ address
     height: 400px
     cursor: hand
 
-img
-    max-width: 100%
-    -webkit-filter: grayscale(50%)
-    filter: grayscale(50%)
+.about-img
+    padding: 3rem 0
+    img
+        max-width: 100%
+        -webkit-filter: grayscale(50%)
+        filter: grayscale(50%)
 
 
 // ABOUT
@@ -320,7 +388,7 @@ footer
     border: 1px solid #E1E0E0
     outline: 1px solid #E1E0E0
     outline-offset: 10px
-    background-color: #8A8889
+    background-color: $color-my-grey-dark
 
 .hr-line
     display: flex
@@ -333,7 +401,7 @@ footer
     flex: 1
     content: ''
     height: 1.5px
-    background: #8A8889
+    background: $color-my-grey-dark
     margin: 0 0 0 1em
 
 
@@ -343,10 +411,6 @@ footer
 
 // ===============================================
 // FONTS
-
-@font-face
-    font-family: 'OpenSans'
-    src: url('../fonts/OpenSans-Regular.ttf')
 
 @font-face
     font-family: 'Roboto'
@@ -369,11 +433,14 @@ footer
 .m-shadow
     box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)
 
+.m-shadow-menu
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.32),0 2px 10px 0 rgba(0,0,0,.24)
+
 .m-shadow-big
     box-shadow: 0 8px 17px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19)
 
-.m-shadow-big-in
-    box-shadow: 0 0 55px 0 rgba(255,255,255,.8) inset
+.m-border
+    border-bottom: 1px solid #90afc5
 
 .bg-stylish
     background-color: #4B515D!important
