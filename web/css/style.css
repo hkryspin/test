@@ -357,6 +357,12 @@ footer .copyright {
 @font-face {
   font-family: "OpenSans";
   src: url("../fonts/OpenSans-Regular.ttf"); }
+.disable-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
 .m-shadow {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
 
