@@ -4,34 +4,48 @@
 
 {% block content %}
 
-<section id="contact">
-
-    <div class="site-title" style="position: relative; background: url({{ asset('images/site-title.png') }}) center center no-repeat; width: 100%; height: 100%; background-size: cover;">
-        <div class="container" style="position: relative; z-index: 1">
-            <h2>Jak do nas trafić</h2>
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item active">Kontakt</li>
-            </ol>
-        </div>
+<div class="site-title" style="position: relative; background: url({{ asset('images/site-title.png') }}) center center no-repeat; width: 100%; height: 100%; background-size: cover;">
+    <div class="container" style="position: relative; z-index: 1">
+        <h2>Jak do nas trafić</h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active">Kontakt</li>
+        </ol>
     </div>
+</div>
+
+<section id="contact">
 
     <div class="container">
 
         <div class="col-md-4">
             <address>
-                <h1 class="text-autumn" style="font-size:20px;">INFORMACJE KONTAKTOWE</h1>
-                <p><i class="fa fa-institution"></i> PPU "eSPa"</p>
+                <h1 class="color-autumn" style="font-size:20px;">INFORMACJE KONTAKTOWE</h1>
                 <hr />
-                <p><i class="fa fa-street-view"></i> Paweł Szumski</p>
-                <p><i class="fa fa-road"></i> Klementyny Hoffmanowej 1a</p>
-                <p><i class="fa fa-building"></i> 78-200 Białogard</p>
+                <h6><strong>Adres:</strong></h6>
+                <p>
+                    P.P.U. "eSPa"<br />
+                    Paweł Szumski<br />
+                    ul. Klementyny Hoffmanowej 1a<br />
+                    78-200 Białogard
+                </p>
                 <hr />
-                <p><i class="nip">NIP</i> 672-100-60-88</p>
+                <p><strong>NIP:</strong> 672-100-60-88</p>
                 <hr />
-                <p><i class="fa fa-phone"></i> +48 (94) 312 0867</p>
-                <p><i class="fa fa-fax"></i> +48 (94) 312 5539</p>
-                <p><i class="fa fa-envelope"></i> espa@espa.com.pl</p>
+                <h6><strong>Telefon:</strong></h6>
+                <p>
+                    <em>tel:</em> +48 (94) 312 0867<br />
+                    <em>fax:</em> +48 (94) 312 5539
+                </p>
+                <hr />
+                <h6><strong>E-mail:</strong></h6>
+                <p>espa@espa.com.pl
+                <p><em>biuro:</em><br />office@espa.com.pl</p>
+                <p><em>sprawy techniczne:</em><br />tech@espa.com.pl</p>
+                <p><em>zamówienia:</em><br />zamowienia@espa.com.pl</p>
+                <p>Karol Szumski<br />k.szumski@espa.com.pl</p>
+                <p>Paweł Szumski<br />p.szumski@espa.com.pl</p>
+                <hr />
             </address>
         </div>
 
@@ -186,55 +200,55 @@
                         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBdfX9End5ovq15yd5pXnsZJIR0cF-eqo&callback=initMap">
                 </script>
             </section>
-        </div>
 
-    </div>
-</section>
+            <div class="card m-shadow m-t-3">
+                <div class="card-block">
 
-<section class="container m-t-3">
-    <div class="card col-md-8 offset-md-4 m-shadow">
-        <div class="card-block">
+                    <div class="form-header m-shadow-big" style="background-color: #3A3738">
+                        <h3><i class="fa fa-envelope"></i> Napisz do nas:</h3>
+                    </div>
 
-            <div class="form-header m-shadow-big" style="background-color: #3A3738">
-                <h3><i class="fa fa-envelope"></i> Napisz do nas:</h3>
-            </div>
+                    <div class="done" style="display: none;">
+                        <div class="alert alert-success">
+                            <button type="button" class="close" data-dismiss="alert">×</button>
+                            Twoja wiadomość została wysłana. Dziękujemy!
+                        </div>
+                    </div>
 
-            <div class="done" style="display: none;">
-                <div class="alert alert-success">
-                    <button type="button" class="close" data-dismiss="alert">×</button>
-                    Twoja wiadomość została wysłana. Dziękujemy!
+                    <form action="" id="main-contact-form" class="form">
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="mc-name" class="sr-only">Imię i Nazwisko</label>
+                                <input type="text" class="form-control" id="mc-name" name="mc-name" placeholder="Imię i Nazwisko">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="mc-email" class="sr-only">Firma</label>
+                                <input type="text" class="form-control" id="mc-company" name="mc-company" placeholder="Firma">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="mc-email" class="sr-only">E-mail</label>
+                                <input type="text" class="form-control" id="mc-email" name="mc-email" placeholder="E-mail">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="mc-email" class="sr-only">Telefon</label>
+                                <input type="text" class="form-control" id="mc-phone" name="mc-phone" placeholder="Telefon">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="mc-msg" class="sr-only">Example textarea</label>
+                            <textarea class="form-control" id="mc-msg" name="mc-msg" rows="4" placeholder="Wiadomość"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-outline-success">Wyślij</button>
+                    </form>
+
                 </div>
             </div>
 
-            <form action="" id="main-contact-form" class="form">
-                <div class="row">
-                    <div class="form-group col-md-6">
-                        <label for="mc-name" class="sr-only">Imię i Nazwisko</label>
-                        <input type="text" class="form-control" id="mc-name" name="mc-name" placeholder="Imię i Nazwisko">
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="mc-email" class="sr-only">Firma</label>
-                        <input type="text" class="form-control" id="mc-company" name="mc-company" placeholder="Firma">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="form-group col-md-6">
-                        <label for="mc-email" class="sr-only">E-mail</label>
-                        <input type="text" class="form-control" id="mc-email" name="mc-email" placeholder="E-mail">
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="mc-email" class="sr-only">Telefon</label>
-                        <input type="text" class="form-control" id="mc-phone" name="mc-phone" placeholder="Telefon">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="mc-msg" class="sr-only">Example textarea</label>
-                    <textarea class="form-control" id="mc-msg" name="mc-msg" rows="4" placeholder="Wiadomość"></textarea>
-                </div>
-                <button type="submit" class="btn btn-outline-success">Wyślij</button>
-            </form>
 
         </div>
+
     </div>
 </section>
 

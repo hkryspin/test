@@ -16,9 +16,10 @@ $color-my-grey-dark: #989898
 
 html, body
     //height: 100%
+    color: #000
     background-color: #fefefe
     border-top: 1px solid $color-my-black
-    font-family: 'SansPro', sans-serif
+    font-family: 'OpenSans', sans-serif
 
 .site-wrapper
     padding: 0
@@ -70,7 +71,7 @@ html, body
     height: auto
     float: none
     color: #000
-    font-family: Georgia, "Times New Roman"
+    font-family: Georgia, Times, "Times New Roman", serif
     font-size: 4.25rem
     font-weight: 800
     text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15)
@@ -229,12 +230,11 @@ html, body
     top: 0
     height: 25rem
     color: #000
+    text-shadow: none
     h1
         font-weight: 400
     h2
         font-weight: 300
-    div
-        -webkit-animation-duration: 5s
     @media (max-width: 480px)
         h1
             font-size: 1.5rem
@@ -310,30 +310,27 @@ html, body
 // ===============================================
 
 
+// ===============================================
+// ABOUT
+
+.about-img
+    padding: 3rem 0
+    img
+        max-width: 100%
+        -webkit-filter: grayscale(50%)
+        filter: grayscale(50%)
+
 // ABOUT
 // ===============================================
 
-.nip
-    font-style: normal
-    font-weight: bold
-address
-    .fa, .nip
-        color: $color-my-grey-dark
-address
-    h1
-        margin-bottom: 25px
-    p
-        margin: 0 0 10px
-        text-align: left
-        i
-            margin-right: 30px
-            width: 16px
-            height: 16px
-            text-align: center
-        .nip
-            margin-right: 18.47px
-            font-style: normal
-            font-weight: bold
+
+// ===============================================
+// CONTACT
+
+#contact
+    em
+        font-style: normal
+        color: #666
 
 .form-header
     color: #fff
@@ -350,15 +347,7 @@ address
     height: 400px
     cursor: hand
 
-.about-img
-    padding: 3rem 0
-    img
-        max-width: 100%
-        -webkit-filter: grayscale(50%)
-        filter: grayscale(50%)
-
-
-// ABOUT
+// CONTACT
 // ===============================================
 
 
@@ -369,10 +358,13 @@ footer
     p
         margin-bottom: .75rem
     h4
-        font-family: 'SansPro-Semibold'
+        font-weight: 600
         font-size: 1rem
         line-height: 1.5
         margin-bottom: .75rem
+    .nip
+        font-style: normal
+        font-weight: bold
     .copyright
         color: #E1E0E0
         padding: 2rem 5rem
@@ -417,16 +409,8 @@ footer
     src: url('../fonts/Roboto-Regular.ttf')
 
 @font-face
-    font-family: 'SansPro'
-    src: url('../fonts/SourceSansPro-Regular.ttf')
-
-@font-face
-    font-family: 'SansPro-Bold'
-    src: url('../fonts/SourceSansPro-Bold.ttf')
-
-@font-face
-    font-family: 'SansPro-Semibold'
-    src: url('../fonts/SourceSansPro-Semibold.ttf')
+    font-family: 'OpenSans'
+    src: url('../fonts/OpenSans-Regular.ttf')
 
 // ======
 
@@ -465,11 +449,11 @@ footer
 .bg-autumn
     background-color: #763626
 
-.text-mist
+.color-mist
     color: #90afc5
-.text-stone
+.color-stone
     color: #336b87
-.text-shadow
+.color-shadow
     color: #2a3132
-.text-autumn
+.color-autumn
     color: #763626
