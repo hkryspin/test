@@ -51,6 +51,9 @@ html, body {
   background-color: transparent;
   border-radius: 0; }
 
+.site-header a {
+  text-decoration: none; }
+
 .site-logo {
   height: auto;
   float: none;
@@ -136,38 +139,26 @@ html, body {
   -o-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out; }
 
-.navbar-nav .nav-link {
-  color: #3A3738;
-  font-family: "Roboto", sans-serif; }
-
 .navbar-nav {
   padding-left: 3rem;
   vertical-align: middle; }
 
-@media (max-width: 991px) {
-  #fix-wrapper {
-    display: none; } }
+.navbar-nav .nav-link {
+  color: #3A3738;
+  font-family: "Roboto", sans-serif; }
+
 @media (min-width: 992px) {
-  .affix {
+  .sticky.is-sticky {
     position: fixed;
-    left: 0;
-    right: 0;
     top: 0;
     z-index: 100;
-    width: 100%; }
-    .affix.navbar {
-      background-color: #333; }
-
-  .affix.navbar .nav-link, .affix.navbar .navbar-brand {
-    color: #fff; } }
-@media (max-width: 34em) {
-  .navbar .navbar-nav {
-    float: none !important; }
-    .navbar .navbar-nav > .nav-item {
-      float: none;
-      margin-left: 0.1rem; }
-  .navbar .collapse.in, .navbar .collapsing {
-    clear: both; } }
+    width: 100%;
+    background-color: #2a3132; }
+    .sticky.is-sticky .nav-link {
+      color: #fefefe; } }
+@media (max-width: 991px) {
+  .sticky-wrapper {
+    display: none; } }
 .carousel-container {
   margin-bottom: 5rem;
   padding: 0; }

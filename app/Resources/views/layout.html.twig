@@ -50,28 +50,22 @@
         </div>
     </div>
 
-    <div class="container-fluid">
-
-        <div class="row m-shadow-menu">
-            <nav class="navbar text-xs-center" data-toggle="affix">
-                <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsingNavbar" aria-controls="collapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                    MENU <i class="fa fa-bars"></i>
-                </button>
-                <div class="collapse navbar-toggleable-md" id="collapsingNavbar">
-                    <div class="nav navbar-nav">
-                        <a class="nav-item nav-link" href="{{ path('homepage') }}">
-                            <i class="fa fa-home"></i>
-                        </a>
-                        <a class="nav-item nav-link" href="{{ path('about') }}">O NAS</a>
-                        <a class="nav-item nav-link" href="#">USŁUGI</a>
-                        <a class="nav-item nav-link" href="#">REALIZACJE</a>
-                        <a class="nav-item nav-link" href="{{ path('contact') }}">KONTAKT</a>
-                    </div>
-                </div>
-            </nav>
+    <nav class="navbar navbar-full m-shadow-menu" data-toggle="sticky-onscroll">
+        <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsingNavbar" aria-controls="collapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            MENU <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-toggleable-md" id="collapsingNavbar">
+            <div class="nav navbar-nav">
+                <a class="nav-item nav-link" href="{{ path('homepage') }}">
+                    <i class="fa fa-home"></i>
+                </a>
+                <a class="nav-item nav-link" href="{{ path('about') }}">O NAS</a>
+                <a class="nav-item nav-link" href="#">USŁUGI</a>
+                <a class="nav-item nav-link" href="#">REALIZACJE</a>
+                <a class="nav-item nav-link" href="{{ path('contact') }}">KONTAKT</a>
+            </div>
         </div>
-
-    </div>
+    </nav>
 
 </header>
 

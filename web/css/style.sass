@@ -67,6 +67,9 @@ html, body
 // ===============================================
 // HEADER
 
+.site-header a
+    text-decoration: none
+
 .site-logo
     height: auto
     float: none
@@ -151,46 +154,27 @@ html, body
     -o-transition: all .5s ease-out
     transition: all .5s ease-out
 
+.navbar-nav
+    padding-left: 3rem
+    vertical-align: middle
+
 .navbar-nav .nav-link
     color: $color-my-black
     font-family: 'Roboto', sans-serif
 
-.navbar-nav
-    //display: inline-block
-    padding-left: 3rem
-    vertical-align: middle
-
-
-
-// sticky navbar
-@media (max-width: 991px)
-    #fix-wrapper
-        display: none
-
 @media (min-width: 992px)
-    .affix
+    .sticky.is-sticky
         position: fixed
-        left: 0
-        right: 0
         top: 0
         z-index: 100
         width: 100%
-        &.navbar
-            background-color: #333
+        background-color: $color-shadow
+        .nav-link
+            color: #fefefe
 
-    .affix.navbar .nav-link, .affix.navbar .navbar-brand
-        color: #fff
-
-// collapsed
-@media (max-width: 34em)
-    .navbar
-        .navbar-nav
-            float: none !important
-            > .nav-item
-                float: none
-                margin-left: .1rem
-        .collapse.in, .collapsing
-            clear: both
+@media (max-width: 991px)
+    .sticky-wrapper
+        display: none
 
 // HEADER
 // ===============================================

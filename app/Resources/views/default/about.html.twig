@@ -4,22 +4,22 @@
 
 {% block content %}
 
-<section id="about_us">
-
-    <div class="site-title" style="position: relative; background: url({{ asset('images/site-title.png') }}) center center no-repeat; width: 100%; height: 100%; background-size: cover;">
-        <div class="container" style="position: relative; z-index: 1">
-            <h2>Nasza Firma</h2>
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ path('homepage') }}">Home</a></li>
-                <li class="breadcrumb-item active">O Nas</li>
-            </ol>
-        </div>
+<div class="site-title" style="position: relative; background: url({{ asset('images/site-title.png') }}) center center no-repeat; width: 100%; height: 100%; background-size: cover;">
+    <div class="container" style="position: relative; z-index: 1">
+        <h2>Nasza Firma</h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{ path('homepage') }}">Home</a></li>
+            <li class="breadcrumb-item active">O Nas</li>
+        </ol>
     </div>
+</div>
+
+<section id="about_us">
 
     <div class="container">
         <div class="row">
 
-        <div class="col-xs-6 text-justify">
+        <div class="col-xs-12 col-xl-6 text-justify">
 
         <h4 class="m-b-1 color-autumn">Technologia i tradycja</h4>
         <p class="m-b-2">
@@ -45,7 +45,7 @@
 
         </div>
 
-        <div class="about-img col-xs-6 m-t-3" style="background-color: #989898">
+        <div class="col-xs-12 col-xl-6 about-img m-t-3" style="background-color: #989898">
             <img class="m-shadow-big" src="{{ asset('images/espa-at-work.jpg') }}" alt="eSPa at work" />
         </div>
 
