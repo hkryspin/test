@@ -1,3 +1,8 @@
+=flex
+    display: -webkit-flex     /* NEW - Chrome */
+    display: -ms-flexbox      /* TWEENER - IE 10 */
+    display: flex             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
 *, *:before, *:after
     box-sizing: inherit
 
@@ -15,11 +20,13 @@ $color-my-black: #3A3738
 $color-my-grey-dark: #989898
 
 html, body
-    //height: 100%
     color: #000
     background-color: #fefefe
     border-top: 1px solid $color-my-black
     font-family: 'OpenSans', sans-serif
+
+    //background-image: linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px), linear-gradient(#eee .1em, transparent .1em)
+    //background-size: 100% 1.2em
 
 .site-wrapper
     padding: 0
@@ -80,11 +87,12 @@ html, body
     text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15)
 
 .contact-box
+    display: inline-block
     margin-left: .9375rem
     padding: 0 .75rem
 
 .contact-box-icon
-    display: flex
+    +flex
     align-items: center
     &:hover
         .fa
@@ -94,11 +102,11 @@ html, body
             -o-transition: color .5s ease-out
             transition: color .5s ease-out
     > .fa
+        font: normal normal normal 40px/1 FontAwesome
         line-height: inherit
         float: left
         display: inline-block
         margin-right: .625rem
-        font-size: 2.5rem
         color: $color-my-grey-dark
         -webkit-transition: color .5s ease-out
         -moz-transition: color .5s ease-out
@@ -106,48 +114,14 @@ html, body
         transition: color .5s ease-out
 
 .contact-box-text
-    line-height: 1.25rem
     color: $color-my-black
-
-.contact-box-head
     font-size: 14px
-
-@media (min-width: 992px)
-    .header-contacts
-        display: -webkit-flex
-        display: -ms-flexbox
-        display: flex
-        -webkit-justify-content: center
-        -ms-flex-pack: center
-        justify-content: center
-        margin-bottom: 2rem
-    .email
-        border-left: 1px dotted $color-my-grey-dark
-        border-right: 1px dotted $color-my-grey-dark
-        padding-left: 27px
-        padding-right: 27px
-    .contact-box-text
-        display: flex
-        -webkit-flex-direction: column
-        -ms-flex-direction: column
-        flex-direction: column
-    .box-separator
-        display: none
-
-@media (min-width: 1200px)
-    .header-contacts
-        padding: 26.91px 0
-    .site-logo
-        float: left
-    .header-contacts
-        -webkit-justify-content: flex-end
-        -ms-flex-pack: end
-        justify-content: flex-end
-        margin-bottom: 0
 
 .navbar
     border-radius: 0
     background-color: #f9f9f9
+
+    border-bottom: 1px solid #90afc5
 
     -webkit-transition: all .5s ease-out
     -moz-transition: all .5s ease-out
@@ -155,7 +129,6 @@ html, body
     transition: all .5s ease-out
 
 .navbar-nav
-    padding-left: 3rem
     vertical-align: middle
 
 .navbar-nav .nav-link
@@ -281,6 +254,21 @@ html, body
 
 #activities
     background-color: #f9f9f9
+    .list-group
+        .list-group-item
+            border: none
+            padding: 1.25rem
+            margin-bottom: 2px
+            background-color: #f0f0f0
+        .list-group-item:hover, .current-item
+            color: #fefefe
+            background: linear-gradient(to right, #003356, rgb(0,91,147))
+            -webkit-transition: all .2s ease
+            -moz-transition: all .2s ease
+            -o-transition: all .2s ease
+            transition: all .2s ease
+
+    // CARD COLUMS
     .card
         display: inline-block // fix for card-columns in bootstrap alpha 4
     .card-title
@@ -393,7 +381,7 @@ footer
     background-color: $color-my-grey-dark
 
 .hr-line
-    display: flex
+    +flex
     flex-direction: row
     justify-content: center
     align-items: center
@@ -401,6 +389,7 @@ footer
 
 .hr-line::after
     flex: 1
+    display: inline-block // IE 11
     content: ''
     height: 1.5px
     background: $color-my-grey-dark
@@ -408,6 +397,57 @@ footer
 
 
 // FOOTER
+// ===============================================
+
+
+// ===============================================
+// MEDIA
+
+@media (min-width: 768px)
+    .header-contacts, .site-logo
+        +flex
+        -webkit-justify-content: center
+        -ms-flex-pack: center
+        justify-content: center
+        margin-bottom: 2rem
+    .email
+        border-left: 1px dotted $color-my-grey-dark
+        border-right: 1px dotted $color-my-grey-dark
+        padding-left: 27px
+        padding-right: 27px
+    .contact-box-text
+        +flex
+        -webkit-flex-direction: column
+        -ms-flex-direction: column
+        flex-direction: column
+    .box-separator
+        display: none
+    .navbar-nav
+        text-align: center
+        > .nav-item
+            float: none
+            display: inline-block
+    .carousel-caption
+        left: 10%
+        right: 10%
+    footer
+        font-size: 95%
+
+@media (min-width: 992px)
+    .header-contacts
+        padding: 26.91px 0
+    .site-logo
+        float: left
+    .header-contacts
+        -webkit-justify-content: flex-end
+        -ms-flex-pack: end
+        justify-content: flex-end
+        margin-bottom: 0
+    .navbar-nav
+        > .nav-item
+            float: left
+
+// MEDIA
 // ===============================================
 
 
