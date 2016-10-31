@@ -5,12 +5,13 @@ imports:
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
-parameters:
-    locale: pl
+#parameters:
+#    locale: pl
 
 framework:
     #esi:             ~
-    translator:      { fallbacks: ["%locale%"] }
+    #translator:      { fallbacks: ["%locale%"] }
+    translator:      { fallbacks: ["pl"] }
     secret:          "%secret%"
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
@@ -21,7 +22,8 @@ framework:
     #serializer:      { enable_annotations: true }
     templating:
         engines: ['twig']
-    default_locale:  "%locale%"
+    #default_locale:  "%locale%"
+    default_locale:  "pl"
     trusted_hosts:   ~
     trusted_proxies: ~
     session:
