@@ -21,11 +21,13 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/about", defaults={"_locale"="pl"})
-     * @Route("/{_locale}/about", requirements={"_locale" = "pl|en|de"})
+     * @Route("/{_locale}/about", defaults={"_locale" = "pl"})
      */
     public function aboutAction(Request $request)
     {
+        // @Route("/about", defaults={"_locale"="pl"})
+        // @Route("/{_locale}/about", requirements={"_locale" = "pl|en|de"})
+
         // Route("/{_locale}/about", defaults={"_locale" = "pl"})
         $locale = $request->getLocale();
         echo "<pre><h2>" . $locale . "</h2></pre>";
