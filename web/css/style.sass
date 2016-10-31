@@ -63,6 +63,7 @@ html, body
     content: ''
     height: 1px
     background: $color-shadow
+    //background: #fefefe
     margin: 0 1em
 
 .breadcrumb
@@ -74,7 +75,9 @@ html, body
 // ===============================================
 // HEADER
 
-.site-header a
+.site-header
+    padding-top: 1rem
+    a
     text-decoration: none
 
 .site-logo
@@ -121,7 +124,7 @@ html, body
     border-radius: 0
     background-color: #f9f9f9
 
-    border-bottom: 1px solid #90afc5
+    //border-bottom: 1px solid #90afc5
 
     -webkit-transition: all .5s ease-out
     -moz-transition: all .5s ease-out
@@ -130,10 +133,18 @@ html, body
 
 .navbar-nav
     vertical-align: middle
+    .nav-lang
+        float: right
 
 .navbar-nav .nav-link
     color: $color-my-black
     font-family: 'Roboto', sans-serif
+
+.navbar-nav
+    .dropdown-toggle
+        padding: 0
+        border: none
+        background: transparent
 
 @media (min-width: 992px)
     .sticky.is-sticky
@@ -263,32 +274,86 @@ html, body
 
 #activities
     background-color: #f9f9f9
-    .list-group
-        .list-group-item
-            border: none
-            padding: 1.25rem
-            margin-bottom: 2px
-            background-color: #f0f0f0
-        .list-group-item:hover, .current-item
-            color: #fefefe
-            background: linear-gradient(to right, #003356, rgb(0,91,147))
-            -webkit-transition: all .2s ease
-            -moz-transition: all .2s ease
-            -o-transition: all .2s ease
-            transition: all .2s ease
+    //background-image: linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px), linear-gradient(#eee .1em, transparent .1em)
+    //background-size: 100% 1.2em
+    .serv
+        +flex
+        align-items: center
+        text-align: center
+        //background-color: rgb(0,91,147)
+        padding: 0
+        margin: 0 1rem 2rem
+        //overflow: hidden
+        .mask
+            z-index: 1
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            //overflow: hidden
+            background-color: rgba(0,91,147,.9)
+            background-image: linear-gradient(rgba(0,91,147,.4) .1em, transparent .1em)
+            background-size: 100% .5em
+            transition: all .4s ease-in-out
+            &:hover
+                background-color: rgba(0,91,147,.5)
+                background-image: linear-gradient(rgba(0,91,147,.1) .1em, transparent .1em)
+                background-size: 100% .5em
+                box-shadow: 0 8px 17px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19)
+                transition: all .4s ease-in-out
+            //&:hover ~ .shape
+                transition: all .4s ease-in-out
+                background-color: rgba(0,91,147,.9)
+
+        p
+            color: #fff
+            font-size: 2rem
+        img
+            width: 100%
+            height: auto
+            //height: 420px
+            padding: 0
+    .shape
+        position: absolute
+        top: 0
+        height: 24.5rem
+        width: 100px
+        background-color: rgba(0,0,0,.4)
+        -moz-transform: skew(-45deg)
+        -webkit-transform: skew(-45deg)
+        transform: skew(-45deg)
+    //.shape-00
+        left: -40%
+    .shape-0
+        left: -20%
+    //.shape-1
+        left: 0
+    //.shape-2
+        left: 20%
+    //.shape-3
+        left: 40%
+    //.shape-4
+        left: 60%
+    //.shape-5
+        left: 80%
+    //.shape-6
+        left: 100%
+    //.shape-7
+        left: 120%
 
     // CARD COLUMS
-    .card
+    //.card
         display: inline-block // fix for card-columns in bootstrap alpha 4
-    .card-title
+    //.card-title
         color: #fefefe
         font-size: 1.5rem
         line-height: 2rem
         margin-bottom: 0
-    .card-subtitle
+    //.card-subtitle
         margin-top: .5rem
         color: #dedede
-    img
+    //img
         width: 100%
         -webkit-filter: grayscale(50%)
         filter: grayscale(50%)
@@ -322,10 +387,35 @@ html, body
     max-width: 100%
     -webkit-filter: grayscale(50%)
     filter: grayscale(50%)
-    padding: 4rem .5rem
-    background-color: #fefefe
+    margin: 4rem 0
+    box-shadow: 0 8px 17px 0 #000,0 6px 20px 0 #000
+    //padding: 4rem .5rem
+    //background-color: #fefefe
+    //border: 50px dashed rgb(0,91,147)
 
 // ABOUT
+// ===============================================
+
+
+// ===============================================
+// SERVICES
+
+#page-services
+    .list-group
+        .list-group-item
+            border: none
+            padding: 1.25rem
+            margin-bottom: 2px
+            background-color: #f0f0f0
+        .list-group-item:hover, .current-item
+            color: #fefefe
+            background: linear-gradient(to right, #003356, rgb(0,91,147))
+            -webkit-transition: all .2s ease
+            -moz-transition: all .2s ease
+            -o-transition: all .2s ease
+            transition: all .2s ease
+
+// SERVICES
 // ===============================================
 
 
@@ -473,6 +563,11 @@ footer
 
 // ===============================================
 // UTILS
+
+.flex-center
+    +flex
+    justify-content: center
+    align-items: center
 
 .disable-select
     -webkit-user-select: none

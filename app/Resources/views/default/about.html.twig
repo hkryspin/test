@@ -1,10 +1,10 @@
 {% extends '::layout.html.twig' %}
 
-{% block title %}O nas | {% endblock %}
+    {% block title %}O nas | {% endblock %}
 
-{% block content %}
+    {% block content %}
 
-<div class="site-title" style="position: relative; background: url({{ asset('images/site-title-about.png') }}) center top no-repeat; width: 100%; height: 100%; background-size: cover;">
+<div class="site-title" style="position: relative; background: url({{ asset('images/site-title-about.png') }}) center top no-repeat; width: 100%; background-size: cover;">
     <div class="container" style="position: relative; z-index: 1">
         <h2>Nasza Firma</h2>
         <ol class="breadcrumb">
@@ -21,32 +21,25 @@
 
         <div class="col-xs-12 col-xl-6 text-justify">
 
-        <h4 class="m-b-1 color-autumn">Technologia i tradycja</h4>
+        <h4 class="m-b-1 color-autumn">{% trans %}about.h1{% endtrans %}</h4>
         <p class="m-b-2">
-            Przedsiębiorstwo produkcyjno-usługowe “eSPa” zostało założone w roku 1994.
-            Od 22 lat dostarczamy narzędzia i oprzyrządowanie dla firm zajmujących się obróbką
-            przewodów i produkcją wiązek elektrycznych dla różnorakich branż przemysłu.
+            {% trans %}about.p1{% endtrans %}
         </p>
 
-        <h4 class="m-b-1 color-autumn">Precyzja wykonania</h4>
+        <h4 class="m-b-1 color-autumn">{% trans %}about.h2{% endtrans %}</h4>
         <p class="m-b-2">
-            Nasza wiedza i długoletnie doświadczenie przynosi efekt w szerokim
-            zadowoleniu i satysfakcji klientów. Ciągłe udoskonalanie procesów technologicznych
-            powoduje trwałe utrzymanie wysokiej jakości wytwarzanych podzespołów.
+            {% trans %}about.p2{% endtrans %}
         </p>
 
-        <h4 class="m-b-1 color-autumn">Gwarancja jakości</h4>
+        <h4 class="m-b-1 color-autumn">{% trans %}about.h3{% endtrans %}</h4>
         <p class="m-b-2">
-            Wprowadzony system zarządzania produkcją pozwala na szybkie i skuteczne eliminowanie
-            ewentualnych błędów. Naszą specjalnością jest wytwarzanie narzędzi i zbrojenie głowic do
-            wykonywania wzorców - niejednokrotnie na podstawie niewielkiej ilości dostarczonych
-            informacji.
+            {% trans %}about.p3{% endtrans %}
         </p>
 
         </div>
 
         <div class="col-xs-12 col-xl-6 about-img m-t-3">
-            <img class="m-shadow-big" src="{{ asset('images/espa-at-work.jpg') }}" alt="eSPa at work" />
+            <img src="{{ asset('images/espa-at-work.jpg') }}" alt="eSPa at work" />
         </div>
 
         </div>

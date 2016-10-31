@@ -56,9 +56,31 @@
                     <i class="fa fa-home"></i>
                 </a>
                 <a class="nav-item nav-link" href="{{ path('about') }}">O NAS</a>
-                <a class="nav-item nav-link" href="#">USŁUGI</a>
+                <a class="nav-item nav-link" href={{ path('services') }}>USŁUGI</a>
                 <a class="nav-item nav-link" href="#">REALIZACJE</a>
                 <a class="nav-item nav-link" href="{{ path('contact') }}">KONTAKT</a>
+
+                <!--<div class="btn-group">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-language fa-2x" aria-hidden="true"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <button class="dropdown-item" type="button">Polski</button>
+                        <button class="dropdown-item" type="button">English</button>
+                        <button class="dropdown-item" type="button">Deutsch</button>
+                    </div>
+                </div>-->
+
+                <div class="nav-lang">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-language fa-2x" aria-hidden="true"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="#">Polski</a>
+                        <a class="dropdown-item" href="#">English</a>
+                        <a class="dropdown-item" href="#">Deutsch</a>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>

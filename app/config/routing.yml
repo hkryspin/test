@@ -6,6 +6,16 @@ about:
     path: /about
     defaults: {_controller: AppBundle:DefaultController:about}
 
+#about:
+#    path:     /{_locale}/about
+#    defaults: {_controller: AppBundle:DefaultController:about, _locale: pl}
+#    requirements:
+#        _locale: pl|en|de
+
+services:
+    path: /services
+    defaults: {_controller: AppBundle:DefaultController:services}
+
 contact:
     path: /contact
     defaults: {_controller: AppBundle:DefaultController:contact}

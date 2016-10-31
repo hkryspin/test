@@ -13,17 +13,33 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request)
     {
+        $locale = $request->getLocale();
+        echo "<pre><h2>" . $locale . "</h2></pre>";
         return $this->render('default/index.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..'),
         ]);
     }
 
     /**
-     * @Route("/about")
+     * @Route("/about", defaults={"_locale"="pl"})
+     * @Route("/{_locale}/about", requirements={"_locale" = "pl|en|de"})
      */
-    public function aboutAction()
+    public function aboutAction(Request $request)
     {
+        // Route("/{_locale}/about", defaults={"_locale" = "pl"})
+        $locale = $request->getLocale();
+        echo "<pre><h2>" . $locale . "</h2></pre>";
         return $this->render('default/about.html.twig', [
+            'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..'),
+        ]);
+    }
+
+    /**
+     * @Route("/services")
+     */
+    public function servicesAction()
+    {
+        return $this->render('default/services.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..'),
         ]);
     }
