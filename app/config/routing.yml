@@ -3,14 +3,10 @@ app:
     type:     annotation
 
 about:
-    path: /about
+    path:     /{_locale}/about
     defaults: {_controller: AppBundle:DefaultController:about}
-
-#about:
-#    path:     /{_locale}/about
-#    defaults: {_controller: AppBundle:DefaultController:about, _locale: pl}
-#    requirements:
-#        _locale: pl|en|de
+    requirements:
+        _locale: pl|en|de
 
 services:
     path: /services
