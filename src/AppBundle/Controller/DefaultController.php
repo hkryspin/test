@@ -4,33 +4,25 @@ namespace AppBundle\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\Request;
+//use Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends Controller
 {
     /**
-     * @Route("/", name="homepage")
+     * @Route("/")
      */
-    public function indexAction(Request $request)
+    public function indexAction()
     {
-        $locale = $request->getLocale();
-        echo "<pre><h2>" . $locale . "</h2></pre>";
         return $this->render('default/index.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..'),
         ]);
     }
 
     /**
-     * @Route("/{_locale}/about")
+     * @Route("/about")
      */
-    public function aboutAction(Request $request)
+    public function aboutAction()
     {
-        // @Route("/about", defaults={"_locale"="pl"})
-        // @Route("/{_locale}/about", requirements={"_locale" = "pl|en|de"})
-
-        // Route("/{_locale}/about", defaults={"_locale" = "pl"})
-        $locale = $request->getLocale();
-        echo "<pre><h2>" . $locale . "</h2></pre>";
         return $this->render('default/about.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..'),
         ]);

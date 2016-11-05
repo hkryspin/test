@@ -1,12 +1,13 @@
 app:
     resource: "@AppBundle/Controller/"
-    type:     annotation
+    prefix:   /{_locale}/
+    requirements:
+        _locale: '%app.locales%'
+    defaults: { _locale: locale}
 
 about:
-    path:     /{_locale}/about
+    path:     /about
     defaults: {_controller: AppBundle:DefaultController:about}
-    requirements:
-        _locale: pl|en|de
 
 services:
     path: /services
