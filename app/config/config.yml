@@ -11,6 +11,7 @@ parameters:
     locale_supported:
         pl_PL: pl
         en_US: en
+        en_GB: en
         de_DE: de
 
 framework:

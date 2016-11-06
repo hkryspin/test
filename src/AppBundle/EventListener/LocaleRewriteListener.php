@@ -17,7 +17,7 @@ class LocaleRewriteListener implements EventSubscriberInterface
     private $router;
     private $routeCollection;
     //private $urlMatcher;
-    private $defaultLocale;
+    //private $defaultLocale;
     private $supportedLocales;
     private $localeRouteParam;
 
@@ -25,7 +25,7 @@ class LocaleRewriteListener implements EventSubscriberInterface
     {
         $this->router = $router;
         $this->routeCollection = $router->getRouteCollection();
-        $this->defaultLocale = $defaultLocale;
+        //$this->defaultLocale = $defaultLocale;
         $this->supportedLocales = $supportedLocales;
         $this->localeRouteParam = $localeRouteParam;
         $context = new RequestContext("/");
@@ -53,8 +53,10 @@ class LocaleRewriteListener implements EventSubscriberInterface
 
         if ($this->isLocaleSupported($locale)) {
             $locale = $this->supportedLocales[$locale];
-        } else if ($locale == ""){
-            $locale = $request->getDefaultLocale();
+        //} else if ($locale == ""){
+        } else {
+            //$locale = $request->getDefaultLocale();
+            $locale = 'pl';
         }
 
         $pathLocale = "/".$locale.$path;

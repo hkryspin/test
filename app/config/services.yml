@@ -8,7 +8,7 @@ services:
 #        class: AppBundle\Directory\ClassName
 #        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
 
-    app.eventlisteners.localerewritelistener:
+    app.event_listener.locale_rewrite_listener:
         class: AppBundle\EventListener\LocaleRewriteListener
         arguments: ["@router", "%kernel.default_locale%", "%locale_supported%"]
         tags:

@@ -2,7 +2,7 @@ app:
     resource: "@AppBundle/Controller/"
     prefix:   /{_locale}/
     requirements:
-        _locale: '%app.locales%'
+        _locale: '%app.locales%|'
     defaults: { _locale: locale}
 
 about:
