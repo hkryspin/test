@@ -36,12 +36,12 @@ html, body
 
 .site-title
     padding: 3rem 0
-    margin-bottom: 3rem
     color: #fefefe
 
 //bg image overlay
 .site-title:after
-    background-color: rgba(0,47,102,0.8)
+    //background-color: rgba(0,47,102,0.8)
+    background-color: rgba(0,69,125,.8)
     content: ''
     margin: auto
     position: absolute
@@ -55,10 +55,9 @@ html, body
     flex-direction: row
     justify-content: center
     align-items: center
-    padding-top: 5rem
-    margin-bottom: 3rem
+    padding: 4rem 0
 
-.section-title::before, .section-title::after
+//.section-title::before, .section-title::after
     flex: 1
     content: ''
     height: 1px
@@ -78,7 +77,7 @@ html, body
 .site-header
     padding-top: 1rem
     a
-    text-decoration: none
+        text-decoration: none
 
 .site-logo
     height: auto
@@ -168,7 +167,6 @@ html, body
 // HOME
 
 .carousel-container
-    margin-bottom: 5rem
     padding: 0
 
 .carousel-control.left, .carousel-control.right
@@ -272,91 +270,33 @@ html, body
     width: 300px
     margin-top: 350px
 
+
+// ACTIVITIES
+
 #activities
-    background-color: #f9f9f9
-    //background-image: linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px), linear-gradient(#eee .1em, transparent .1em)
-    //background-size: 100% 1.2em
-    .serv
-        +flex
-        align-items: center
-        text-align: center
-        //background-color: rgb(0,91,147)
-        padding: 0
-        margin: 0 1rem 2rem
-        //overflow: hidden
-        .mask
-            z-index: 1
-            position: absolute
-            top: 0
-            left: 0
-            width: 100%
-            height: 100%
-            //overflow: hidden
-            background-color: rgba(0,91,147,.9)
-            background-image: linear-gradient(rgba(0,91,147,.4) .1em, transparent .1em)
-            background-size: 100% .5em
-            transition: all .4s ease-in-out
-            &:hover
-                background-color: rgba(0,91,147,.5)
-                background-image: linear-gradient(rgba(0,91,147,.1) .1em, transparent .1em)
-                background-size: 100% .5em
-                box-shadow: 0 8px 17px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19)
-                transition: all .4s ease-in-out
-            //&:hover ~ .shape
-                transition: all .4s ease-in-out
-                background-color: rgba(0,91,147,.9)
-
-        p
-            color: #fff
-            font-size: 2rem
-        img
-            width: 100%
-            height: auto
-            //height: 420px
-            padding: 0
-    .shape
-        position: absolute
-        top: 0
-        height: 24.5rem
-        width: 100px
-        background-color: rgba(0,0,0,.4)
-        -moz-transform: skew(-45deg)
-        -webkit-transform: skew(-45deg)
-        transform: skew(-45deg)
-    //.shape-00
-        left: -40%
-    .shape-0
-        left: -20%
-    //.shape-1
-        left: 0
-    //.shape-2
-        left: 20%
-    //.shape-3
-        left: 40%
-    //.shape-4
-        left: 60%
-    //.shape-5
-        left: 80%
-    //.shape-6
-        left: 100%
-    //.shape-7
-        left: 120%
-
-    // CARD COLUMS
-    //.card
-        display: inline-block // fix for card-columns in bootstrap alpha 4
-    //.card-title
-        color: #fefefe
-        font-size: 1.5rem
-        line-height: 2rem
-        margin-bottom: 0
-    //.card-subtitle
-        margin-top: .5rem
-        color: #dedede
-    //img
-        width: 100%
-        -webkit-filter: grayscale(50%)
-        filter: grayscale(50%)
+    margin-top: 5rem
+    .site-title
+        padding: 4rem 0
+    h2
+        margin: 0
+    .card
+        margin-top: 2rem
+        //box-shadow: 0 8px 17px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19)
+        //box-shadow: 0 0 17px 0 rgba(0,0,0,.2)
+        border: none
+    .stripe
+        box-shadow: 0 0 17px 0 rgba(0,0,0,.2)
+        background: linear-gradient(to right, rgba(254,254,254,0), rgba(0,91,147,.5), rgba(254,254,254,0))
+    .blue-stripe
+        position: relative
+        height: 30px
+        background: linear-gradient(to right, rgba(254,254,254,0), rgba(0,91,147,0.9), rgba(254,254,254,0))
+        opacity: .1
+        box-shadow: 0 0 17px 0 rgba(0,0,0,.2)
+    .blue-stripe.dark
+        opacity: .2
+    .blue-stripe.darker
+        opacity: .3
 
 .partners
     background-color: #E1E0E0
@@ -383,6 +323,9 @@ html, body
 // ===============================================
 // ABOUT
 
+#about_us
+    margin-top: 3rem
+
 .about-img img
     max-width: 100%
     -webkit-filter: grayscale(50%)
@@ -401,6 +344,7 @@ html, body
 // SERVICES
 
 #page-services
+    margin-top: 3rem
     .list-group
         .list-group-item
             border: none
@@ -423,6 +367,7 @@ html, body
 // CONTACT
 
 #contact
+    margin-top: 3rem
     em
         font-style: normal
         color: #666
@@ -491,7 +436,7 @@ footer
     display: inline-block // IE 11
     content: ''
     height: 1.5px
-    background: $color-my-grey-dark
+    background: rgba(0,0,0,.1)
     margin: 0 0 0 1em
 
 
