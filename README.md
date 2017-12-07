@@ -1,1 +1,1 @@
-W budowie.
+W trakcie budowy.
