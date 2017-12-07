@@ -1,2 +1,3 @@
-<<<<<<< W budowie.
+<<<<<<< HEAD
+W budowie.
 >>>>>>>
